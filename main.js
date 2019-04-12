@@ -92,7 +92,16 @@ checkInput(x)
 //          simpleEvenAdding(0)=======>0
 
 
+function simpleEvenAdding(num){
+  //loop over numbers from 1 to num
+  for(...,...,...){
+   //check if current index is even or odd
+   if(...){
 
+   } 
+  }
+  return solution;
+}
 
 //Question 5
 //Write function letterCapitalize(str) taking a string and capitlize the first letter of each word.
@@ -100,33 +109,17 @@ checkInput(x)
 //examples: 
 //          letterCapitalize("hello world")============> "Hello World"
 //          letterCapitalize("you cannot find the answer online")===> "You Cannot Find The Answer Online"
-function LetterCapitalize(str) {
+function letterCapitalize(str){
+  //seperate the str into array of words
+["you", " cannot", " find", " the"," answer"," online."]
+  //using split
+"you"[0, str]+ "you".slice(1)
 
-    var arr = str.split(" ");
-    for (var i = 0; i < arr.length; i++) {
-      arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
-  
-      return arr.join(" ");
-    }
-  
-  
-  
-  
-  
-  {
-     int maxDiff(int arr[], int arr_size)
-     {
-         int max_diff = arr[1] - arr[0];
-         int i, j;
-         for (i = 0; i < arr_size; i++)
-         {
-             for (j = i + 1; j < arr_size; j++)
-             {
-                 if (arr[j] - arr[i] > max_diff)
-                     max_diff = arr[j] - arr[i];
-             }
-         }
-         return max_diff;
+  //loop over the array of words
+
+  //capitalize the first character
+}
+
 
 
 
@@ -136,7 +129,7 @@ function LetterCapitalize(str) {
 //Example:
 //          simpleReverse("hello")=====>"olleh"
 //          simpleReverse("I Love to Code")====>"edoC ot evoL I"
-
+function simpleReverse("")
 
 
 
@@ -149,7 +142,11 @@ function LetterCapitalize(str) {
 //          findDiff([1,1,1,1,1])=======>0
 //          findDiff([1])========>0
 //          findDiff([])======>0
+function findDiff(arr){
 
+  //find min and max array
+  //max-min
+}
 
 
 //Question 8
@@ -171,7 +168,7 @@ function TimeConvert(num) {
     return `${hour}:${minutes}`;
   }
 
-  TimeConvert(124);
+  TimeConvert(236);
 
 
 //Question 9
@@ -182,7 +179,16 @@ function TimeConvert(num) {
 //          findStr("o", "daodo")=====>2
 //          findStr("ha", "abcdef")====>0
 //          findStr("h", "hihelloho")====>3
-
+function findStr(str,long){
+  var length = str.length;
+  var answer= 0;
+  for(var i=0;i<long.length-str.length;i++){
+   if(long.slice(i,i+str.length)===str){
+     answer++;
+   }
+  }
+  return answer;
+}
 
 
 //Question 10
@@ -193,7 +199,34 @@ function TimeConvert(num) {
 //          selfDividingNumber(1,10)=======>[1,2,3,4,5,6,7,8,9]
 //          selfDividingNumber(12,21)======>[12,15]
 
+//var x = selfDividingNumber(left,right);
+//document.selfDividingNumber("").innerHTML = x;
 
+//function selfDividingNumver(a, b) {
+  //return a / b;
+function selfDividingNumbers(left, right){
+  //store the answer
+  var solution=[];
+  //loop over from left to right
+  for(var i=left;i<=right;i++){
+    //if i is selfdividing
+ if (/*i is selfdividing*/){
+      solution.push(i);
+ }
+}
+return solution;
+}
+//check if num is selfdividing
+function isSelfdividing(num){
+  //get digits in num
+  var digits=num.toString().split("");
+  //loop over digits
+  for(var i=0;i<digits.length;i++){
+    if(num%digits[i]!==0){return false;
+    }
+  }
+  return true;
+}
 //Question 11
 //Write the function moveZeros(num) taking an array of numbers and move all the 0's to the end of it while
 //maintaining the relative order of the non-zero elements.
@@ -203,7 +236,28 @@ function TimeConvert(num) {
 //          moveZeros([0,0,0])======>[0,0,0]
 //          moveZeros([1,2,312,11,2])=====>[1,2,312,11,2]
 
+function moveZeros(nums){
+  //count zeros
+  var counter=0;
+  //store answer
+  var solution=[];
+  //loop over nums
+  for(var i=0; i<nums.length;i++){
+    if(nums[i]===0){
+      //adding one counter
+      ...
 
+    } else{
+      //push it into solution
+      ...
+    }
+  }
+  for (var i=counter; i>0;i--){
+    // push one zero into the solution
+    solution.push(0);
+  }
+  return solution;
+}
 
 //Question 12
 //Create an average() function that calculates the average of any array of numbers.
@@ -212,3 +266,4 @@ function TimeConvert(num) {
 //          average([2,3,3,5,7,10])====>5
 //          average([7,1432,12,13,100])=====>312.8
 //          average([])=========>0
+function average()
