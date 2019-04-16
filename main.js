@@ -38,50 +38,21 @@ function printIntRev(n){
 //checkInput(‘5’) ======> ‘string’
 //checkInput(true)=====> boolean
 //checkInput([1,2,3,4]) =====> -1
-
-function checkInput(x) {
-    return typeof x;
-    if(x === undefined){
-        console.log ("-1");
-    }else if (typeof x);
-    }
-}
-console.log (checkInput(5));
-// Also tried
-checkInput(x)
-
-  if (undefined) {
-  console.log - 1;
-
-  } else if typeof("hello");
-
-     console.log ("string");
-{
-
-  } else if   checkInput(blubbler) {
-     console.log("number");
-
-  } else if  checkInput(x)
-   { console.log ("string");
-
-     { else if checkInput(true) {
-     console.log ("boolean");
-  } else if
-     }
-
-   if(...||...||...) {
-      return typeof x;
-      //if x is a boolean,number or string
+//if x is a boolean,number or string
       //then we print out its type
       //otherwise we return -1
 
-   }
-   console.log(checkInput(1,2,3)){
-      // loop over numbers from 1 to num
-      for(...;...for;...) {
 
-      }
-   }
+function checkInput(x) {
+if(typeof x==="number"|| typeof x === "string"||typeof x ==="boolean"){
+  return typeof x;
+}else {
+  return -1;
+}
+}
+
+      
+   
 
 //Question 4
 //Write the function simpleEvenAdding(num) taking a number and add up all the even numbers from 1 to num.
