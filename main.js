@@ -17,7 +17,7 @@ function printInt(n){
  }
 }
 printInt(10);
-
+-----------------------------------------------------------------------------------------------------------------------
 //Question 2
 //Write the function printIntRev(n) 
 //taking one parameter n and  print all natural numbers
@@ -28,10 +28,11 @@ function printIntRev(n){
     }
 }
    printIntRev(10);
-
+--------------------------------------------------------------------------------------------------------------------------------------------
 //Question 3
 //Write the function checkInput(x)
-// taking one parameter x and return the string ‘number’ if x is a number; return the string ‘string’ if x is a string; and return ‘boolean’ if x is a boolean. Otherwise returns -1. 
+// taking one parameter x and return the string ‘number’ if x is a number; return the string ‘string’ if x is a string;
+// and return ‘boolean’ if x is a boolean. Otherwise returns -1. 
 //Examples:
 //checkInput(5) ====> ‘number’
 //checkInput(‘hello’)======> ‘string’
@@ -51,7 +52,7 @@ if(typeof x==="number"|| typeof x === "string"||typeof x ==="boolean"){
 }
 }
 
-      
+ ----------------------------------------------------------------------------------------------------------------     
    
 
 //Question 4
@@ -64,15 +65,20 @@ if(typeof x==="number"|| typeof x === "string"||typeof x ==="boolean"){
 
 
 function simpleEvenAdding(num){
+  //store  answer
+  var solution =0;
   //loop over numbers from 1 to num
-  for(...,...,...){
+  for(var x=0;x<=num;x++){
    //check if current index is even or odd
-   if(...){
+   if(x%2===0){
+     solution +=x;
 
    } 
   }
   return solution;
 }
+console.log(simpleEvenAdding(10));
+-----------------------------------------------------------------------------------------------------------------------------------
 
 //Question 5
 //Write function letterCapitalize(str) taking a string and capitlize the first letter of each word.
@@ -80,30 +86,42 @@ function simpleEvenAdding(num){
 //examples: 
 //          letterCapitalize("hello world")============> "Hello World"
 //          letterCapitalize("you cannot find the answer online")===> "You Cannot Find The Answer Online"
+
+
 function letterCapitalize(str){
   //seperate the str into array of words
-["you", " cannot", " find", " the"," answer"," online."]
-  //using split
-"you"[0, str]+ "you".slice(1)
+  var word = str.split(" ");
+  //store the answer
+  var solution="";
 
-  //loop over the array of words
-
-  //capitalize the first character
+  //find the first character in each word
+for (var x=0;x<words.length;x++){
+var upperWord=words[x].replace(words[x][0], words[x][0].toUpperCase());
+solution +=upperWord;
 }
 
+return solution.slice(1);
+}
+console.log(letterCapitalize("you cannot find the answer online"));
 
-
-
+------------------------------------------------------------------------------------------------------------------------------------
 
 //Question 6
 //Write the function simpleReverse(str) taking a string and return the string in reversed order.
 //Example:
 //          simpleReverse("hello")=====>"olleh"
 //          simpleReverse("I Love to Code")====>"edoC ot evoL I"
-function simpleReverse("")
+function simpleReverse(str){
+//transfer string into arrary
+var  revArray=str.split("");
+//reverse array
+var revArray=strArray.reverse();
+//transfer array back to string
+return revArray.join("");
+}
+console.log(simpleReverse("I Love to Code"));
 
-
-
+-------------------------------------------------------------------------------------------------------------------------------------
 //Question 7
 //Write the function findDiff(arr) taking an array of numbers as parameter and return the difference between 
 //the maximum number and the minimum number(max-min). 
@@ -114,11 +132,15 @@ function simpleReverse("")
 //          findDiff([1])========>0
 //          findDiff([])======>0
 function findDiff(arr){
-
+//find max num
+var max=Math.max(... arr);
   //find min and max array
+  var min=Math.min(... arr);
   //max-min
+  return max-min;
 }
-
+console.log(findDiff([1,2,3,8,9,12,15]));
+------------------------------------------------------------------------------------------------------------------------------------
 
 //Question 8
 //Write the function timeConvert(num) taking a number a parameter and return the number of hours and minutes
@@ -130,17 +152,16 @@ function findDiff(arr){
 //          timeConvert(59)====>0:59
 
 function TimeConvert(num) {
-
-
-    var hour = Math.floor(num/60);
-
+  //getting hours
+    var hour = parseInt(num/60);
+//getting mins
     var minutes = num % 60;
-
-    return `${hour}:${minutes}`;
+//answer
+    return hour + ":" + minutes;
   }
 
-  TimeConvert(236);
-
+  console.log(timeConvert(236));
+-------------------------------------------------------------------------------------------------------------------------------------------
 
 //Question 9
 //Write the function findStr(str,long) taking two strings as parameters and return how many str you can find in long.
@@ -160,8 +181,14 @@ function findStr(str,long){
   }
   return answer;
 }
-
-
+console.log(findStr());
+/*
+function findStr(str,long){
+  var splitedArray=long.split(str);
+  return splitedArray.length-1;
+}
+*/
+---------------------------------------------------------------------------------------------------------------------------------------------
 //Question 10
 //Write the function selfDividingNumber(left,right) taking two number bound as parameters and return an array
 // of every possible self dividing number between them, including the bonds.
@@ -198,6 +225,8 @@ function isSelfdividing(num){
   }
   return true;
 }
+console.log(selfDividingNumbers(1,22));
+------------------------------------------------------------------------------------------------------------------------------------------
 //Question 11
 //Write the function moveZeros(num) taking an array of numbers and move all the 0's to the end of it while
 //maintaining the relative order of the non-zero elements.
@@ -215,21 +244,19 @@ function moveZeros(nums){
   //loop over nums
   for(var i=0; i<nums.length;i++){
     if(nums[i]===0){
-      //adding one counter
-      ...
 
     } else{
-      //push it into solution
-      ...
+      solution.push(nums[i]);
     }
   }
-  for (var i=counter; i>0;i--){
-    // push one zero into the solution
+  for (var x=counter; x>0;x--){
+    
     solution.push(0);
   }
   return solution;
 }
-
+console.log(moveZeros[1,2,5,0,0,5,8,0,0,8]);
+----------------------------------------------------------------------------------------------------------------------------------------
 //Question 12
 //Create an average() function that calculates the average of any array of numbers.
 //Examples:
@@ -237,4 +264,17 @@ function moveZeros(nums){
 //          average([2,3,3,5,7,10])====>5
 //          average([7,1432,12,13,100])=====>312.8
 //          average([])=========>0
-function average()
+function average(nums){
+  if(nums.length===0){
+    return 0;
+  }
+  //adding up all numbers
+var sum=0;
+for(var i=0;i<nums.length;i++){
+  sum+=nums[i];
+}
+
+  //divide by length
+  return sum/ nums.length
+}
+console.log(average)
